@@ -1,0 +1,4 @@
+rootProject.setName("websocket-app");
+
+include("websocket-app");
+include("websocket-domain");
