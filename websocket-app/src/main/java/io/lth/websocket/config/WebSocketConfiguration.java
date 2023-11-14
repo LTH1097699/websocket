@@ -19,15 +19,15 @@ import java.util.concurrent.CopyOnWriteArrayList;
 public class WebSocketConfiguration implements WebSocketConfigurer {
     @Override
     public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
-        var ss = new CopyOnWriteArrayList<>();
+        registry.addHandler(new WebSocketHandler(), "/wss");
     }
 
-    public class WebSocketConfigurations extends AbstractWebSocketMessageBrokerConfigurer {
-        @Override
-        public void registerStompEndpoints(StompEndpointRegistry registry) {
-            super.registerStompEndpoints(registry);
-        }
-    }
+//    public class WebSocketConfigurations extends AbstractWebSocketMessageBrokerConfigurer {
+//        @Override
+//        public void registerStompEndpoints(StompEndpointRegistry registry) {
+//            super.registerStompEndpoints(registry);
+//        }
+//    }
 }
 
 
