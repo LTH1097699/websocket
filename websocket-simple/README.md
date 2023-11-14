@@ -1,5 +1,7 @@
 # WebSocket Simple
 
+_-_ This is simple broadcast, when one session send message, this message will send to all session in WebSocketSession list
+
 #### - Dependencies:
 1. "org.springframework.boot:spring-boot-starter-web:2.5.6"
 2. "org.springframework.boot:spring-boot-starter-websocket:2.5.6"
@@ -7,10 +9,13 @@
 
 #### - Demo
 
-**Test connection**
+**Test connection with cUrl**
 ```
 curl -v --include --header "Connection: Upgrade" --header "Upgrade: websocket" --header "Sec-WebSocket-Key: qwerty" --header "Sec-WebSocket-Version: 13" http://localhost:8080/ws
 ```
+
+**Test Postman**
+- create multiple connections and send message
 
 ---
 #### - Explaining
@@ -53,3 +58,5 @@ _-_ Add handler and path
 registry.addHandler(new WebSocketHandler(), "/web-socket");
 ```
 > After registering handler, Whenever have request to this path `/web-socket`, register will catch and let `the registered handler` work with it
+
+use-case [1](https://stackoverflow.com/questions/49378759/path-parameters-in-websocketconfigurer-addhandler-in-spring)
