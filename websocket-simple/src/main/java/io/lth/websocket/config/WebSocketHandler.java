@@ -40,11 +40,11 @@ public class WebSocketHandler extends AbstractWebSocketHandler {
         });
     }
 
-    public class TextWebSocketHandlerConfig extends TextWebSocketHandler {
-
-    }
-
-    public class BinaryWebSocketHandlerConfig extends BinaryWebSocketHandler {
-
-    }
+//    public class TextWebSocketHandlerConfig extends TextWebSocketHandler {
+//
+//    }
+//
+//    public class BinaryWebSocketHandlerConfig extends BinaryWebSocketHandler {
+//
+//    }
 }
