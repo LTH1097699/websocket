@@ -8,8 +8,8 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/websocket-app" />
             <option value="$PROJECT_DIR$/websocket-domain" />
+            <option value="$PROJECT_DIR$/websocket-simple" />
           </set>
         </option>
       </GradleProjectSettings>

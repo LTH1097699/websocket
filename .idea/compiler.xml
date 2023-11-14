@@ -7,9 +7,9 @@
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.22/lombok-1.18.22.jar" />
         </processorPath>
-        <module name="websocket-app.main" />
-        <module name="test.websocket-app.websocket-app.main" />
-        <module name="websocket-app.websocket-domain.main" />
+        <module name="websocket.websocket-domain.main" />
+        <module name="websocket.websocket-simple.main" />
+        <module name="websocket.main" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="17" />
