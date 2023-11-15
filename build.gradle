@@ -74,6 +74,10 @@ allprojects {
     }
 }
 
+project("websocket-stomp") {
+    apply plugin: 'groovy'
+}
+
 project("websocket-simple") {
     apply plugin: 'groovy'
 //    apply plugin: 'com.diffplug.spotless'

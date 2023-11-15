@@ -10,6 +10,7 @@
         <module name="websocket.websocket-domain.main" />
         <module name="websocket.websocket-simple.main" />
         <module name="websocket.main" />
+        <module name="websocket.websocket-stomp.main" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="17" />

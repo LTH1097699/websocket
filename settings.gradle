@@ -2,3 +2,4 @@ rootProject.setName("websocket");
 
 include("websocket-simple");
 include("websocket-domain");
+include("websocket-stomp");
