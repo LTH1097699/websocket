@@ -10,17 +10,18 @@ import org.springframework.web.socket.handler.WebSocketHandlerDecorator;
 
 import java.util.Optional;
 
-/**
- * Extension of the {@link WebSocketHandlerDecorator websocket handler decorator} that allows to manually test the
- * STOMP protocol.
- *
- * @author Sebastien Gerard
- */
 @Slf4j
 public class CustomWebSocketHandlerDecorator extends WebSocketHandlerDecorator {
 
+    private final String lineBreak;
+
     public CustomWebSocketHandlerDecorator(WebSocketHandler webSocketHandler) {
         super(webSocketHandler);
+        if (System.getProperty("os.name").toLowerCase().contains("window")) {
+            lineBreak = "\r\n";
+        } else {
+            lineBreak = "\n";
+        }
     }
 
     @Override
@@ -34,7 +35,7 @@ public class CustomWebSocketHandlerDecorator extends WebSocketHandlerDecorator {
      * carriage returns are missing (when the command does not need a body) there are also added.
      */
     private WebSocketMessage<?> updateBodyIfNeeded(WebSocketMessage<?> message) {
-        if (!(message instanceof TextMessage) || ((TextMessage) message).getPayload().endsWith("\u0000")) {
+        if (!(message instanceof TextMessage castMessage) || castMessage.getPayload().endsWith("\u0000")) {
             return message;
         }
 
@@ -46,11 +47,11 @@ public class CustomWebSocketHandlerDecorator extends WebSocketHandlerDecorator {
             return message;
         }
 
-        if (!stompCommand.get().isBodyAllowed() && !payload.endsWith("\n\n")) {
-            if (payload.endsWith("\n")) {
-                payload += "\n";
+        if (!stompCommand.get().isBodyAllowed() && !payload.endsWith(lineBreak.concat(lineBreak))) {
+            if (payload.endsWith(lineBreak)) {
+                payload += lineBreak;
             } else {
-                payload += "\n\n";
+                payload += lineBreak.concat(lineBreak);
             }
         }
 
@@ -59,11 +60,8 @@ public class CustomWebSocketHandlerDecorator extends WebSocketHandlerDecorator {
         return new TextMessage(payload);
     }
 
-    /**
-     * Returns the {@link StompCommand STOMP command} associated to the specified payload.
-     */
     private Optional<StompCommand> getStompCommand(String payload) {
-        final int firstCarriageReturn = payload.indexOf('\n');
+        final int firstCarriageReturn = payload.indexOf(lineBreak);
 
         if (firstCarriageReturn < 0) {
             return Optional.empty();
