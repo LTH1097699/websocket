@@ -11,6 +11,7 @@
             <option value="$PROJECT_DIR$/websocket-domain" />
             <option value="$PROJECT_DIR$/websocket-simple" />
             <option value="$PROJECT_DIR$/websocket-stomp" />
+            <option value="$PROJECT_DIR$/websocket-stomp-sockjs" />
           </set>
         </option>
       </GradleProjectSettings>

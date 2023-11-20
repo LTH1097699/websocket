@@ -7,9 +7,9 @@ import java.net.InetAddress;
 import java.net.UnknownHostException;
 
 @SpringBootApplication
-public class Application {
+public class WebSocketSTOMPSockJsApplication {
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(WebSocketSTOMPSockJsApplication.class, args);
         try {
             System.out.println(InetAddress.getLocalHost().getHostName());
             System.out.println(InetAddress.getLocalHost().getHostAddress());

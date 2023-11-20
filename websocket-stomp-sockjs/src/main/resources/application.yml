@@ -1,0 +1,10 @@
+logging:
+  level:
+    ROOT: INFO
+    org.springframework.web.socket: TRACE
+#      : INFO
+#      jooq.tools.LoggerListener: DEBUG
+#      org.springframework.cloud.openfeign: DEBUG
+#      feign.okhttp: DEBUG
+#      okhttp3: DEBUG
+#      okhttp3.internal: DEBUG

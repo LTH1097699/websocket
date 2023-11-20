@@ -74,6 +74,10 @@ allprojects {
     }
 }
 
+project("websocket-stomp-sockjs") {
+    apply plugin: 'groovy'
+}
+
 project("websocket-stomp") {
     apply plugin: 'groovy'
 }
