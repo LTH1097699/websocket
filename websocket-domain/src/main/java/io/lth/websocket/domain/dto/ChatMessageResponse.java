@@ -12,5 +12,9 @@ import lombok.Setter;
 @AllArgsConstructor
 @Builder
 public class ChatMessageResponse {
+
+    private String sender;
+    private String recipient;
+
     private String text;
 }

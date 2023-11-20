@@ -3,9 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/websocket.iml" filepath="$PROJECT_DIR$/.idea/modules/websocket.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/websocket-chat/websocket.websocket-chat.main.iml" filepath="$PROJECT_DIR$/.idea/modules/websocket-chat/websocket.websocket-chat.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/websocket-domain/websocket.websocket-domain.main.iml" filepath="$PROJECT_DIR$/.idea/modules/websocket-domain/websocket.websocket-domain.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/websocket-stomp-sockjs/websocket.websocket-stomp-sockjs.main.iml" filepath="$PROJECT_DIR$/.idea/modules/websocket-stomp-sockjs/websocket.websocket-stomp-sockjs.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/websocket-stomp-sockjs/websocket.websocket-stomp-sockjs.test.iml" filepath="$PROJECT_DIR$/.idea/modules/websocket-stomp-sockjs/websocket.websocket-stomp-sockjs.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/websocket-stomp/websocket.websocket-stomp.main.iml" filepath="$PROJECT_DIR$/.idea/modules/websocket-stomp/websocket.websocket-stomp.main.iml" />
     </modules>
   </component>
 </project>

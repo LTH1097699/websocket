@@ -4,3 +4,4 @@ include("websocket-simple");
 include("websocket-domain");
 include("websocket-stomp");
 include("websocket-stomp-sockjs");
+include("websocket-chat");
